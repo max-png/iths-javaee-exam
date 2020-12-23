@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS userEntity;
+DROP TABLE IF EXISTS productEntity;
+DROP TABLE IF EXISTS orderEntity;
+
+
+CREATE TABLE userEntity (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100)
+);
+
+CREATE TABLE productEntity(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES userEntity(id)
+);
+
+CREATE TABLE orderEntity(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+
+)
